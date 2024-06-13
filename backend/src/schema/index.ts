@@ -1,12 +1,16 @@
-export const typeDefs = `#graphql
+import { gql } from 'apollo-server-core';
+
+
+
+export const typeDefs = gql`
   type Book {
-    title: String
     author: String
     coverPhotoURL: String
     readingLevel: String
+    title: String
   }
 
   type Query {
-    books: [Book]
+    books(title: String!): [Book]
   }
 `;
