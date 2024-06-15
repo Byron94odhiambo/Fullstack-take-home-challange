@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Grid, Box, Typography } from '@mui/material';
-import BookSearch from './components/BookSearch';
-import ReadingList from './components/ReadingList';
+// App.js
+import React, { useEffect, useState } from 'react';
+import { Container, Grid, Box } from '@mui/material';
 import { useLazyQuery } from '@apollo/client';
 import { BOOKS_QUERY } from './queries';
+import BookSearch from './components/BookSearch';
+import ReadingList from './components/ReadingList';
+import NavBar from './components/NavBar';
 
 const App = () => {
   const [readingList, setReadingList] = useState([]);
@@ -20,15 +22,12 @@ const App = () => {
   });
 
   useEffect(() => {
-    // Fetch initial set of books on component mount
     fetchInitialBooks({ variables: { title: '' } });
+    document.title = "Teacher's Portal"; // Set the document title
   }, [fetchInitialBooks]);
 
   const addToReadingList = (book) => {
-    // Check if the book is already present in the reading list
     const isAlreadyAdded = readingList.some((item) => item.title === book.title);
-  
-    // If the book is not already added, add it to the reading list
     if (!isAlreadyAdded) {
       setReadingList([...readingList, book]);
     }
@@ -41,29 +40,24 @@ const App = () => {
   };
 
   return (
-    <Container maxWidth="lg">
-      {/* Site Header */}
-      <Box sx={{ mb: 1 }}>
-        <Typography variant="h4" component="h1" sx={{ color: '#5ACCCC', fontFamily: 'Arial' }}>
-          Ello
-        </Typography>
-      </Box>
-
-      {/* Main Content */}
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={8}>
-            <BookSearch addToReadingList={addToReadingList} initialBooks={initialBooks} />
+    <Box sx={{ display: 'flex' }}>
+      <NavBar />
+      <Container maxWidth="lg" sx={{ flexGrow: 1, ml: '240px' }}>
+        <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={4}>
+            <Grid item xs={12} md={8}>
+              <BookSearch addToReadingList={addToReadingList} initialBooks={initialBooks} />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <ReadingList
+                readingList={readingList}
+                removeFromReadingList={removeFromReadingList}
+              />
+            </Grid>
           </Grid>
-          <Grid item xs={12} md={4}>
-            <ReadingList
-              readingList={readingList}
-              removeFromReadingList={removeFromReadingList}
-            />
-          </Grid>
-        </Grid>
-      </Box>
-    </Container>
+        </Box>
+      </Container>
+    </Box>
   );
 };
 
