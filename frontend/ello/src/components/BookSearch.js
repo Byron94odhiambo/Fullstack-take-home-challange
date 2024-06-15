@@ -54,7 +54,7 @@ const BookSearch = ({ addToReadingList, initialBooks }) => {
     <animated.div style={fadeInAnimation}>
       <Box sx={{ marginTop: 4, marginBottom: 4 }}>
         <Typography variant="h6" gutterBottom sx={{ fontFamily: 'Mulish', color: '#335C6E', marginBottom: 2 }}>
-          Welcome teacher!
+          
         </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs={8}>
