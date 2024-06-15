@@ -1,6 +1,6 @@
 // App.js
-import React, { useEffect, useState } from 'react';
-import { Container, Grid, Box } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Container, Grid, Box} from '@mui/material';
 import { useLazyQuery } from '@apollo/client';
 import { BOOKS_QUERY } from './queries';
 import BookSearch from './components/BookSearch';
@@ -23,7 +23,6 @@ const App = () => {
 
   useEffect(() => {
     fetchInitialBooks({ variables: { title: '' } });
-    document.title = "Teacher's Portal"; // Set the document title
   }, [fetchInitialBooks]);
 
   const addToReadingList = (book) => {
@@ -42,7 +41,10 @@ const App = () => {
   return (
     <Box sx={{ display: 'flex' }}>
       <NavBar />
-      <Container maxWidth="lg" sx={{ flexGrow: 1, ml: '240px' }}>
+      <Container maxWidth="lg" sx={{ flexGrow: 1, ml: 0 }}> {/* Adjust ml value if necessary */}
+        <Box sx={{ mb: 1 }}>
+          {/* Remove the Typography component for "Ello" */}
+        </Box>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={4}>
             <Grid item xs={12} md={8}>
