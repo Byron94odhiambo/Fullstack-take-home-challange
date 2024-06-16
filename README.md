@@ -67,69 +67,7 @@ Copy code
 npm run build
 The optimized production build will be generated in the build folder.
 
-Project Structure
-kotlin
-Copy code
-ello-book-assignment
-└── fullstack-take-home-test
-    ├── .gitignore
-    ├── backend
-    │   ├── .eslintrc.json
-    │   ├── package-lock.json
-    │   ├── package.json
-    │   ├── src
-    │   │   ├── app.ts
-    │   │   ├── data
-    │   │   │   └── books.ts
-    │   │   ├── resolvers
-    │   │   │   └── index.ts
-    │   │   └── schema
-    │   │       └── index.ts
-    │   └── tsconfig.json
-    ├── ello
-    ├── ello.pub
-    ├── frontend
-    │   ├── assets
-    │   │   ├── image1.webp
-    │   │   ├── image10.webp
-    │   │   ├── image2.webp
-    │   │   ├── image3.webp
-    │   │   ├── image4.webp
-    │   │   ├── image5.webp
-    │   │   ├── image6.webp
-    │   │   ├── image7.webp
-    │   │   ├── image8.webp
-    │   │   ├── image9.webp
-    │   ├── ello
-    │   │   ├── .gitignore
-    │   │   ├── package-lock.json
-    │   │   ├── package.json
-    │   │   ├── public
-    │   │   │   ├── favicon.ico
-    │   │   │   ├── index.html
-    │   │   │   ├── logo192.png
-    │   │   │   ├── logo512.png
-    │   │   │   ├── manifest.json
-    │   │   │   └── robots.txt
-    │   │   ├── README.md
-    │   │   ├── src
-    │   │   │   ├── ApolloClient.js
-    │   │   │   ├── App.css
-    │   │   │   ├── App.js
-    │   │   │   ├── App.test.js
-    │   │   │   ├── components
-    │   │   │   │   ├── BookList.js
-    │   │   │   │   ├── BookSearch.js
-    │   │   │   │   ├── NavBar.js
-    │   │   │   │   ├── ReadingList.js
-    │   │   │   │   ├── SearchResults.js
-    │   │   │   ├── index.css
-    │   │   │   ├── index.js
-    │   │   │   ├── logo.svg
-    │   │   │   ├── queries.js
-    │   │   │   ├── reportWebVitals.js
-    │   │   │   └── setupTests.js
-    └── README.md
+
 backend/: Contains the server-side code including GraphQL schema and resolvers.
 frontend/: Contains the client-side code including React components.
 frontend/ello/: Contains the main React application.
