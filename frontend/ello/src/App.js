@@ -1,11 +1,12 @@
 // App.js
 import React, { useState, useEffect } from 'react';
-import { Container, Grid, Box} from '@mui/material';
+import { Container, Grid, Box } from '@mui/material';
 import { useLazyQuery } from '@apollo/client';
 import { BOOKS_QUERY } from './queries';
 import BookSearch from './components/BookSearch';
 import ReadingList from './components/ReadingList';
 import NavBar from './components/NavBar';
+import { Helmet } from 'react-helmet'; // Import react-helmet
 
 const App = () => {
   const [readingList, setReadingList] = useState([]);
@@ -40,6 +41,9 @@ const App = () => {
 
   return (
     <Box sx={{ display: 'flex' }}>
+      <Helmet>
+        <title>Teacher's Portal</title> {/* Set the title */}
+      </Helmet>
       <NavBar />
       <Container maxWidth="lg" sx={{ flexGrow: 1, ml: 0 }}> {/* Adjust ml value if necessary */}
         <Box sx={{ mb: 1 }}>

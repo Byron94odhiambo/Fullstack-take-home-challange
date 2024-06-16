@@ -1,6 +1,5 @@
-// components/BookSearch.js (continued)
 import React, { useState, useEffect } from 'react';
-import { TextField, Button, Grid, Box, CircularProgress, Card, CardContent, CardActions, Typography} from '@mui/material';
+import { TextField, Button, Grid, Box, CircularProgress, Card, CardContent, CardActions, Typography } from '@mui/material';
 import { useLazyQuery } from '@apollo/client';
 import { BOOKS_QUERY } from '../queries';
 import { useSpring, animated } from 'react-spring';
@@ -11,7 +10,6 @@ const BookSearch = ({ addToReadingList, initialBooks }) => {
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
   const [page, setPage] = useState(1);
-  
 
   useEffect(() => {
     setOptions(initialBooks);
@@ -22,7 +20,6 @@ const BookSearch = ({ addToReadingList, initialBooks }) => {
       setOptions(data.books);
       setLoading(false);
       setSearched(true);
-      
     },
     onError: (error) => {
       console.error('Error fetching books:', error);
@@ -53,8 +50,11 @@ const BookSearch = ({ addToReadingList, initialBooks }) => {
   return (
     <animated.div style={fadeInAnimation}>
       <Box sx={{ marginTop: 4, marginBottom: 4 }}>
-        <Typography variant="h6" gutterBottom sx={{ fontFamily: 'Mulish', color: '#335C6E', marginBottom: 2 }}>
+        <Typography variant="h5" gutterBottom sx={{ fontFamily: 'Mulish', color: '#335C6E', marginBottom: 2 }}>
           
+        </Typography>
+        <Typography variant="h6" gutterBottom sx={{ fontFamily: 'Mulish', color: '#335C6E', marginBottom: 2 }}>
+          Search for books
         </Typography>
         <Grid container spacing={2} alignItems="center">
           <Grid item xs={8}>
@@ -71,6 +71,7 @@ const BookSearch = ({ addToReadingList, initialBooks }) => {
                   </>
                 ),
               }}
+              sx={{ fontFamily: 'Mulish' }}
             />
           </Grid>
           <Grid item xs={4}>
