@@ -30,8 +30,9 @@ npm (>= 6.x)
 
 Installation
 Clone the repository:
-git clone https://github.com/your-username/teachers-portal.git
-cd teachers-portal
+git clone https://github.com/Byron94odhiambo/Fullstack-take-home-challange.git
+cd Fullstack-take-home-challange
+
 
 Install dependencies for the backend:
 cd fullstack-take-home-test/backend
