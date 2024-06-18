@@ -3,13 +3,13 @@
 This application is designed to help teachers manage their classes, lesson plans, grading, and messages. The application features a book search functionality to aid in lesson planning and allows teachers to maintain a reading list.
 
 ## Features
--Book Search
--Reading List Management
--Class Management
--Lesson Planning
--Grading and Feedback
--Messaging
--Settings
+- Book Search
+- Reading List Management
+- Class Management
+- Lesson Planning
+- Grading and Feedback
+- Messaging
+- Settings
 
 ## Technologies Used
 -React
