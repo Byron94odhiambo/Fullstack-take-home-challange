@@ -1,4 +1,3 @@
-// App.js
 import React, { useState, useEffect } from 'react';
 import { Container, Grid, Box } from '@mui/material';
 import { useLazyQuery } from '@apollo/client';
@@ -22,9 +21,23 @@ const App = () => {
     },
   });
 
+  // Fetch books on component mount
   useEffect(() => {
     fetchInitialBooks({ variables: { title: '' } });
   }, [fetchInitialBooks]);
+
+  // Load reading list from local storage on component mount
+  useEffect(() => {
+    const storedReadingList = localStorage.getItem('readingList');
+    if (storedReadingList) {
+      setReadingList(JSON.parse(storedReadingList));
+    }
+  }, []);
+
+  // Save reading list to local storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('readingList', JSON.stringify(readingList));
+  }, [readingList]);
 
   const addToReadingList = (book) => {
     const isAlreadyAdded = readingList.some((item) => item.title === book.title);
