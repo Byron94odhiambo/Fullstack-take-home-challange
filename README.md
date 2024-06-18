@@ -5,27 +5,27 @@ This application is designed to help teachers manage their classes, lesson plans
 ## Features
 - Book Search
 - Reading List Management
-- Class Management
-- Lesson Planning
-- Grading and Feedback
-- Messaging
-- Settings
+- Class Management [TODO]
+- Lesson Planning [TODO]
+- Grading and Feedback [TODO]
+- Messaging [TODO]
+- Settings [TODO]
 
 ## Technologies Used
--React
--Apollo Client
--GraphQL
--Material-UI (MUI)
--React Spring
--React Helmet
--TypeScript (Backend)
+- React
+- Apollo Client
+- GraphQL
+- Material-UI (MUI)
+- React Spring
+- React Helmet
+- TypeScript (Backend)
 
 ## Getting Started
 Prerequisites
 Make sure you have the following installed:
 
-Node.js (>= 12.x)
-npm (>= 6.x)
+- Node.js (>= 12.x)
+- npm (>= 6.x)
 
 
 Installation
