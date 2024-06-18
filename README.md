@@ -38,9 +38,9 @@ Install dependencies for the backend:
 cd fullstack-take-home-test/backend
 npm install
 
-Install dependencies for the frontend:
-cd ../frontend/ello
-npm install
+- Install dependencies for the frontend:
+  cd ../frontend/ello
+  npm install
 
 Running the Application
 Start the GraphQL server:
