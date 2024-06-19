@@ -45,23 +45,16 @@ Make sure you have the following installed:
 ### Running the Application
 - Start the GraphQL server:
 - Ensure you have a running GraphQL server on http://localhost:4000/graphql. If you do not have one, you will need to set it up. From the backend directory:
-
-
-### npm start
+- npm start
 - Start the development server:
 - From the frontend/ello directory:
-
-### npm start
+- npm start
 - The application should now be running on http://localhost:3000.
 
 ### Building for Production
 - To create a production build of the application, run:
-
-
-### npm run build
+- npm run build
 - The optimized production build will be generated in the build folder.
-
-
 - backend/: Contains the server-side code including GraphQL schema and resolvers.
 - frontend/: Contains the client-side code including React components.
 - frontend/ello/: Contains the main React application.
