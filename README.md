@@ -2,7 +2,8 @@
 ## Overview
 This application is designed to help teachers manage their classes, lesson plans, grading, and messages. The application features a book search functionality to aid in lesson planning and allows teachers to maintain a reading list.
 
-### Contributing![Screenshot (117)](https://github.com/Byron94odhiambo/Fullstack-take-home-challange/assets/38424815/79c8f2cc-f58b-4828-9ee7-0208ed3f00ee)
+### Dashborad
+![Screenshot (117)](https://github.com/Byron94odhiambo/Fullstack-take-home-challange/assets/38424815/79c8f2cc-f58b-4828-9ee7-0208ed3f00ee)
 
 ## Features
 - Book Search
